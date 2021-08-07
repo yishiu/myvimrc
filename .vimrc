@@ -34,8 +34,8 @@ set hlsearch
 " move line up/down with shift
 nnoremap <S-j> :m .+1<CR>==
 nnoremap <S-k> :m .-2<CR>==
-inoremap <S-j> <Esc>:m .+1<CR>==gi
-inoremap <S-k> <Esc>:m .-2<CR>==gi
+"inoremap <S-j> <Esc>:m .+1<CR>==gi
+"inoremap <S-k> <Esc>:m .-2<CR>==gi
 vnoremap <S-j> :m '>+1<CR>gv=gv
 vnoremap <S-k> :m '<-2<CR>gv=gv
 
@@ -85,3 +85,4 @@ Plug 'junegunn/fzf.vim'
 call plug#end()
 
 set clipboard=unnamed
+set showtabline=2
