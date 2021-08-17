@@ -81,8 +81,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'google/vim-searchindex'
 
 call plug#end()
 
 set clipboard=unnamed
 set showtabline=2
+
+"enable visual mode line count
+set showcmd
