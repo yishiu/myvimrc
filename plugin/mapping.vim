@@ -1,0 +1,15 @@
+" Use ctrl+d to remove line
+imap <c-d> <esc>dd$a
+
+" move line up/down with shift
+nnoremap <S-j> :m .+1<CR>==
+nnoremap <S-k> :m .-2<CR>==
+vnoremap <S-j> :m '>+1<CR>gv=gv
+vnoremap <S-k> :m '<-2<CR>gv=gv
+
+"Simple search for visually selected words
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
+
+"Use "*" to search current word
+nnoremap * *N
+
