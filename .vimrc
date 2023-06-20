@@ -80,3 +80,5 @@ let mapleader = ' '
 "set folding method
 set foldmethod=indent
 set foldlevel=99
+
+set ruler
