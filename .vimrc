@@ -10,7 +10,6 @@ set relativenumber
 set autoindent
 set cursorline
 set wrap
-"set noshowmode
 
 "set ":new" pane to below, ":vnew" pane to right
 set splitbelow
@@ -69,8 +68,6 @@ call plug#end()
 "However, using tmux to copy text is enough.
 "set clipboard=unnamedplus
 
-set showtabline=2
-
 "enable visual mode line count
 set showcmd
 
@@ -78,7 +75,14 @@ set showcmd
 let mapleader = ' '
 
 "set folding method
-set foldmethod=indent
-set foldlevel=99
+" Autocommand to set foldmethod based on file type
+augroup FileTypeFold
+  autocmd!
+  " C and C++
+  autocmd FileType c,cpp setlocal foldmethod=syntax
+  " Python
+  autocmd FileType python setlocal foldmethod=indent
+augroup END
+set nofoldenable
 
 set ruler
