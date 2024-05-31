@@ -13,3 +13,6 @@ vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 "Use "*" to search current word
 nnoremap * *N
 
+" Move current tab left/rigth
+noremap <Leader>p  :tabmove -1<CR>
+noremap <Leader>n :tabmove +1<CR>
