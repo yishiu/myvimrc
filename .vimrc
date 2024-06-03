@@ -75,11 +75,12 @@ set showcmd
 let mapleader = ' '
 
 "set folding method
+let g:xml_syntax_folding=1
 " Autocommand to set foldmethod based on file type
 augroup FileTypeFold
   autocmd!
   " C and C++
-  autocmd FileType c,cpp setlocal foldmethod=syntax
+  autocmd FileType c,cpp,xml setlocal foldmethod=syntax
   " Python
   autocmd FileType python setlocal foldmethod=indent
 augroup END
