@@ -84,6 +84,6 @@ augroup FileTypeFold
   " Python
   autocmd FileType python setlocal foldmethod=indent
 augroup END
-set foldlevelstart=99
+set nofoldenable
 
 set ruler
