@@ -87,3 +87,5 @@ augroup END
 set nofoldenable
 
 set ruler
+" Automagically resize splits when the host is resized
+autocmd VimResized * wincmd =
