@@ -1,3 +1,7 @@
+func Eatchar(pat)
+  let c = nr2char(getchar(0))
+  return (c =~ a:pat) ? '' : c
+endfunc
 
 if has("autocmd")
 "restore cursor
@@ -7,12 +11,11 @@ if has("autocmd")
 "enable cursorline only on current window
   autocmd WinEnter * setlocal cursorline
   autocmd WinLeave * setlocal nocursorline
-  
-  autocmd FileType python :iabbrev <buffer> iff if:<left>
-  autocmd FileType javascript :iabbrev <buffer> iff if ()<left>
 
+"type iff+<space> to create if() automatically
+  autocmd FileType python :iabbrev <buffer> iff if:<left>
+  autocmd FileType javascript,c,cpp :iabbrev <buffer> iff if ()<left><C-R>=Eatchar('\s')<CR>
 endif
 
 "remove trailing space in every line but it makes restore cursor goes wrong :(
 "autocmd BufWritePre * :%s/\s\+$//e
-
