@@ -16,3 +16,9 @@ nnoremap * *N
 " Move current tab left/rigth
 noremap <Leader>p  :tabmove -1<CR>
 noremap <Leader>n :tabmove +1<CR>
+
+" Mapping for quit file
+noremap <Leader><space> :q<CR>
+
+" Mapping for fzf search word
+noremap <Leader>s :History/<CR>
