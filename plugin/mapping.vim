@@ -18,7 +18,7 @@ noremap <Leader>p  :tabmove -1<CR>
 noremap <Leader>n :tabmove +1<CR>
 
 " Mapping for quit file
-noremap <Leader><space> :q<CR>
+noremap <Leader><space> :bd<CR>
 
 " Mapping for fzf find word
 noremap <Leader>f :History/<CR>
